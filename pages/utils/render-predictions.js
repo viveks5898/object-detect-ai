@@ -1,7 +1,7 @@
 import {throttle} from "lodash";
 
 export default function renderPredictions(predictions, ctx) {
-    ctx.clearRect(0, 0, ctx.canvas?.width, ctx.canvas.height);
+    ctx.clearRect(0, 0, ctx.canvas?.width, ctx.canvas?.height);
 
   // Fonts
   const font = "16px sans-serif";
