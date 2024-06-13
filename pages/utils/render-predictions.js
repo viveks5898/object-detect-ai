@@ -1,7 +1,7 @@
 import {throttle} from "lodash";
 
 export default function renderPredictions(predictions, ctx) {
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    ctx.clearRect(0, 0, ctx.canvas?.width, ctx.canvas.height);
 
   // Fonts
   const font = "16px sans-serif";
@@ -21,7 +21,7 @@ export default function renderPredictions(predictions, ctx) {
     ctx.fillRect(x, y, width, height);
 
     ctx.fillStyle = isPerson ? "#FF0000" : "#00FFFF";
-    const textWidth = ctx.measureText(prediction.class).width;
+    const textWidth = ctx.measureText(prediction.class)?.width;
     const textHeight = parseInt(font, 10); 
     ctx.fillRect(x, y, textWidth + 4, textHeight + 4);
 
